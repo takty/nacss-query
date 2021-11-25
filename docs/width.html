@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+<title>Width - nacss-query</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.min.css?v152600t">
+<!-- <link rel="stylesheet" href="css/query.min.css?v152600t"> -->
+<script src="js/query.min.js?v152600t"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+	function setValue() { document.getElementById('sw').value = NACSS.BP_WIDTH; }
+	window.addEventListener('resize', setValue);
+	setValue();
+});
+</script>
+</head>
+
+<body>
+	<header>
+		<h1>Width</h1>
+		<nav><a href="index.html">Go back</a></nav>
+	</header>
+
+	<main>
+		<div class="frame">
+			<div><label>NACSS.BP_WIDTH = <output id="sw"></label></div>
+		</div>
+		<div class="col-2">
+			<div>
+				<div class="width-query phone-up">(Phone up)</div>
+			</div>
+			<div>
+				<div class="width-query phone-portrait-up">(Phone portrait up)</div>
+				<div class="width-query phone-landscape-up">Phone landscape up</div>
+			</div>
+		</div>
+		<div class="col-2">
+			<div>
+				<div class="width-query tablet-up">Tablet up</div>
+			</div>
+			<div>
+				<div class="width-query tablet-portrait-up">Tablet portrait up</div>
+				<div class="width-query tablet-landscape-up">Tablet landscape up</div>
+			</div>
+		</div>
+		<div class="width-query desktop-up">Desktop up</div>
+		<div class="width-query big-desktop-up">Big desktop up</div>
+
+		<hr>
+
+		<div class="col-2">
+			<div>
+				<div class="width-query phone-only">Phone only</div>
+			</div>
+			<div>
+				<div class="width-query phone-portrait-only">Phone portrait only</div>
+				<div class="width-query phone-landscape-only">Phone landscape only</div>
+			</div>
+		</div>
+		<div class="col-2">
+			<div>
+				<div class="width-query tablet-only">Tablet only</div>
+			</div>
+			<div>
+				<div class="width-query tablet-portrait-only">Tablet portrait only</div>
+				<div class="width-query tablet-landscape-only">Tablet landscape only</div>
+			</div>
+		</div>
+		<div class="width-query desktop-only">Desktop only</div>
+		<div class="width-query big-desktop-only">(Big desktop only)</div>
+	</main>
+</body>
+</html>

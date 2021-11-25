@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+<title>Browser - nacss-query</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.min.css?v152600t">
+<script src="js/query.min.js?v152600t"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+	document.getElementById('br').value = NACSS.BROWSER;
+	document.getElementById('de').value = NACSS.DEVICE.join(', ');
+});
+</script>
+</head>
+
+<body>
+	<header>
+		<h1>Browser</h1>
+		<nav><a href="index.html">Go back</a></nav>
+	</header>
+
+	<main>
+		<div class="frame">
+			<div><label>NACSS.BROWSER = <output id="br"></label></div>
+			<div><label>NACSS.DEVICE = <output id="de"></label></div>
+		</div>
+		<div class="browser-query chrome">Chrome & Edge</div>
+		<div class="browser-query firefox">Firefox</div>
+		<div class="browser-query safari">Safari</div>
+	</main>
+</body>
+</html>

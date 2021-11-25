@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+<title>Height - nacss-query</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.min.css?v152600t">
+<!-- <link rel="stylesheet" href="css/query.min.css?v152600t"> -->
+<script src="js/query.min.js?v152600t"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+	function setValue() { document.getElementById('sh').value = NACSS.BP_HEIGHT; }
+	window.addEventListener('resize', setValue);
+	setValue();
+});
+</script>
+</head>
+
+<body>
+	<header>
+		<h1>Height</h1>
+		<nav><a href="index.html">Go back</a></nav>
+	</header>
+
+	<main>
+		<div class="frame">
+			<div><label>NACSS.BP_HEIGHT = <output id="sh"></label></div>
+		</div>
+		<div class="col-2">
+			<div>
+				<div class="height-query tiny-height-up">(Tiny height up)</div>
+				<div class="height-query small-height-up">Small height up</div>
+				<div class="height-query medium-height-up">Medium height up</div>
+				<div class="height-query large-height-up">Large height up</div>
+			</div>
+			<div>
+				<div class="height-query tiny-height-only">Tiny height only</div>
+				<div class="height-query small-height-only">Small height only</div>
+				<div class="height-query medium-height-only">Medium height only</div>
+				<div class="height-query large-height-only">(Large height only)</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
