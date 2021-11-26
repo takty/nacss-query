@@ -1,4 +1,5 @@
-@import "../src/sass/_query.scss";
+@use '../src/sass/layout';
+@use '../src/sass/query';
 
 html {
 	scroll-behavior   : smooth;
@@ -59,90 +60,169 @@ div + div {
 
 .width-query {
 	&.phone-up {
-		@include for-phone-up              { border: 2px solid red; }
+		@include query.for-phone-up              { border: 2px solid red; }
 	}
 	&.phone-only {
-		@include for-phone-only            { border: 2px solid red; }
+		@include query.for-phone-only            { border: 2px solid red; }
 	}
 	&.phone-portrait-up {
-		@include for-phone-portrait-up     { border: 2px solid red; }
+		@include query.for-phone-portrait-up     { border: 2px solid red; }
 	}
 	&.phone-portrait-only {
-		@include for-phone-portrait-only   { border: 2px solid red; }
+		@include query.for-phone-portrait-only   { border: 2px solid red; }
 	}
 	&.phone-landscape-up {
-		@include for-phone-landscape-up    { border: 2px solid red; }
+		@include query.for-phone-landscape-up    { border: 2px solid red; }
 	}
 	&.phone-landscape-only {
-		@include for-phone-landscape-only  { border: 2px solid red; }
+		@include query.for-phone-landscape-only  { border: 2px solid red; }
 	}
 	&.tablet-up {
-		@include for-tablet-up             { border: 2px solid red; }
+		@include query.for-tablet-up             { border: 2px solid red; }
 	}
 	&.tablet-only {
-		@include for-tablet-only           { border: 2px solid red; }
+		@include query.for-tablet-only           { border: 2px solid red; }
 	}
 	&.tablet-portrait-up {
-		@include for-tablet-portrait-up    { border: 2px solid red; }
+		@include query.for-tablet-portrait-up    { border: 2px solid red; }
 	}
 	&.tablet-portrait-only {
-		@include for-tablet-portrait-only  { border: 2px solid red; }
+		@include query.for-tablet-portrait-only  { border: 2px solid red; }
 	}
 	&.tablet-landscape-up {
-		@include for-tablet-landscape-up   { border: 2px solid red; }
+		@include query.for-tablet-landscape-up   { border: 2px solid red; }
 	}
 	&.tablet-landscape-only {
-		@include for-tablet-landscape-only { border: 2px solid red; }
+		@include query.for-tablet-landscape-only { border: 2px solid red; }
 	}
 	&.desktop-up {
-		@include for-desktop-up            { border: 2px solid red; }
+		@include query.for-desktop-up            { border: 2px solid red; }
 	}
 	&.desktop-only {
-		@include for-desktop-only          { border: 2px solid red; }
+		@include query.for-desktop-only          { border: 2px solid red; }
 	}
 	&.big-desktop-up {
-		@include for-big-desktop-up        { border: 2px solid red; }
+		@include query.for-big-desktop-up        { border: 2px solid red; }
 	}
 	&.big-desktop-only {
-		@include for-big-desktop-only      { border: 2px solid red; }
+		@include query.for-big-desktop-only      { border: 2px solid red; }
 	}
 }
 
 .height-query {
 	&.tiny-height-up {
-		@include for-tiny-height-up     { border: 2px solid red; }
+		@include query.for-tiny-height-up     { border: 2px solid red; }
 	}
 	&.tiny-height-only {
-		@include for-tiny-height-only   { border: 2px solid red; }
+		@include query.for-tiny-height-only   { border: 2px solid red; }
 	}
 	&.small-height-up {
-		@include for-small-height-up    { border: 2px solid red; }
+		@include query.for-small-height-up    { border: 2px solid red; }
 	}
 	&.small-height-only {
-		@include for-small-height-only  { border: 2px solid red; }
+		@include query.for-small-height-only  { border: 2px solid red; }
 	}
 	&.medium-height-up {
-		@include for-medium-height-up   { border: 2px solid red; }
+		@include query.for-medium-height-up   { border: 2px solid red; }
 	}
 	&.medium-height-only {
-		@include for-medium-height-only { border: 2px solid red; }
+		@include query.for-medium-height-only { border: 2px solid red; }
 	}
 	&.large-height-up {
-		@include for-large-height-up    { border: 2px solid red; }
+		@include query.for-large-height-up    { border: 2px solid red; }
 	}
 	&.large-height-only {
-		@include for-large-height-only  { border: 2px solid red; }
+		@include query.for-large-height-only  { border: 2px solid red; }
 	}
 }
 
 .browser-query {
 	&.chrome {
-		@include for-chrome  { border: 2px solid red; }
+		@include query.for-chrome  { border: 2px solid red; }
 	}
 	&.firefox {
-		@include for-firefox { border: 2px solid red; }
+		@include query.for-firefox { border: 2px solid red; }
 	}
 	&.safari {
-		@include for-safari  { border: 2px solid red; }
+		@include query.for-safari  { border: 2px solid red; }
 	}
+}
+
+
+// -----------------------------------------------------------------------------
+
+
+*[class ^='layout-'] {
+	border: 1px dashed blue;
+	> div, span {
+		background-color: rgba(red, 0.5);
+		border: 4px solid pink;
+		margin: 0;
+	}
+	> span {
+		display: inline-block;
+	}
+}
+
+.height-spacer {
+	height: 6rem;
+}
+
+.col-2 {
+	display: grid;
+	gap    : 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	> * { margin: 0; }
+}
+
+
+// -----------------------------------------------------------------------------
+
+
+.layout-fill-self-wrap {
+	position: relative;
+}
+
+.layout-full-width {
+	@include layout.full-width(1rem);
+}
+
+.layout-centering {
+	@include layout.centering;
+}
+
+.layout-centering-self {
+	@include layout.centering-self(true, true, relative);
+}
+
+.layout-fill-self {
+	@include layout.fill-self;
+}
+
+.layout-side-margin {
+	@include layout.side-margin(40rem, 1rem);
+}
+
+.layout-aspect {
+	@include layout.aspect(3, 1);
+}
+
+.layout-frame-contain {
+	@include layout.frame-contain(3, 2);
+}
+
+.layout-wrap {
+	@include layout.wrap((1rem 2rem));
+}
+
+.layout-column-2 {
+	@include layout.column(2, 2rem);
+}
+
+.layout-column-3 {
+	@include layout.column(3, 2rem);
+}
+
+.layout-column-4 {
+	@include layout.column(4, 2rem);
 }

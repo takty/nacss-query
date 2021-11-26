@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>nacss-layout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.min.css?v131123t">
+</head>
+<body>
+
+	<header>
+		<h1>Layout</h1>
+		<nav><a href="index.html">Go back</a></nav>
+	</header>
+
+	<main>
+		<h2>Width</h2>
+
+		<div class="border">
+			<h3>Side Margin</h3>
+			<div class="layout-side-margin">
+				@include layout.side-margin(40rem, 1rem);
+			</div>
+
+			<h3>Responsive Width</h3>
+			<div class="layout-wrap">
+				<div class="layout-responsive-width">@include layout.width-responsive(40%, 100%, 32rem, false);</div>
+			</div>
+
+			<h3>Full Width</h3>
+			<div class="layout-full-width">
+				@include layout.full-width(1rem);
+			</div>
+		</div>
+
+		<h2>Centering and Fill</h2>
+
+		<div class="border">
+			<h3>Centering</h3>
+			<div>@include layout.centering();</div>
+			<div class="layout-centering height-spacer">
+				<div>Content</div>
+			</div>
+
+			<h3>Centering Self</h3>
+			<div class="layout-centering-self-wrap height-spacer">
+				<span class="layout-centering-self">@include layout.centering-self(true, true);</span>
+			</div>
+
+			<h3>Fill Self</h3>
+			<div class="layout-fill-self-wrap height-spacer">
+				<div class="layout-fill-self">@include layout.fill-self();</div>
+			</div>
+		</div>
+
+		<h2>Aspect Ratio</h2>
+
+		<div class="border">
+			<h3>Aspect</h3>
+			<div>@include layout.aspect(3, 1);</div>
+			<div class="col-2">
+				<div class="layout-aspect">
+					<div>Content</div>
+				</div>
+				<div class="layout-aspect">
+					<div>
+						<p>Very long long long long long long long long long long
+							long long long long long long long long long long long
+							long long long long long long long long long long long
+							long long long long long long long long long long long text.</p>
+					</div>
+				</div>
+			</div>
+
+			<h3>Frame Contain</h3>
+			<div>@include layout.frame-contain(3, 2);</div>
+			<div class="col-2">
+				<div>
+					<a href="https://via.placeholder.com/1600x400.png" class="layout-frame-contain">
+						<img width="800" height="200" src="https://via.placeholder.com/800x200.png" class="size-medium" alt="">
+					</a>
+				</div>
+				<div>
+					<div class="layout-frame-contain">
+						<img width="200" height="800" src="https://via.placeholder.com/200x800.png" class="size-medium" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h2>Wrap</h2>
+
+		<div class="border">
+			<div>@include layout.wrap((1rem 2rem));</div>
+			<div class="layout-wrap">
+				<div>Element 1</div>
+				<div>Element 2</div>
+				<div>Element 3</div>
+				<div>Element 4</div>
+				<div>Element 5</div>
+				<div>Element 6</div>
+				<div>Element 7</div>
+				<div>Element 8</div>
+				<div>Element 9</div>
+			</div>
+		</div>
+
+		<h2>Column</h2>
+
+		<div class="border">
+			<div>@include layout.column(2, 2rem);</div>
+			<div class="layout-column-2">
+				<div>Column 1</div>
+				<div>Column 2</div>
+			</div>
+			<div>@include layout.column(3, 2rem);</div>
+			<div class="layout-column-3">
+				<div>Column 1</div>
+				<div>Column 2</div>
+				<div>Column 3</div>
+			</div>
+			<div>@include layout.column(4, 2rem);</div>
+			<div class="layout-column-4">
+				<div>Column 1</div>
+				<div>Column 2</div>
+				<div>Column 3</div>
+				<div>Column 4</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
