@@ -1,7 +1,7 @@
 {
-	"name": "nacss-query",
+	"name": "nacss-utility",
 	"version": "1.0.0",
-	"description": "A Query Style Sheet",
+	"description": "A Utility Style Sheet",
 	"author": "Takuto Yanagida",
 	"main": "gulpfile.js",
 	"scripts": {
@@ -11,13 +11,13 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/takty/nacss-query.git"
+		"url": "git+https://github.com/takty/nacss-utility.git"
 	},
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/takty/nacss-query/issues"
+		"url": "https://github.com/takty/nacss-utility/issues"
 	},
-	"homepage": "https://github.com/takty/nacss-query#readme",
+	"homepage": "https://github.com/takty/nacss-utility#readme",
 	"browserslist": [
 		"> 1%",
 		"last 2 versions",
