@@ -1,12 +1,27 @@
-@use '../src/sass/layout';
-@use '../src/sass/query';
+/**
+ *
+ * Style for Document
+ *
+ * @author Takuto Yanagida
+ * @version 2021-12-26
+ *
+ */
+
+
+@use '../src/sass/_utility';
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
 
 html {
 	scroll-behavior   : smooth;
 	scroll-padding-top: 8rem;
 
 	font-family: sans-serif;
-	line-height: 1.75;
+	line-height: 1.8;
 }
 
 header,
@@ -29,6 +44,10 @@ header {
 main {
 	margin-top: 2rem;
 }
+
+
+// -----------------------------------------------------------------------------
+
 
 hr {
 	margin-block: 2rem;
@@ -60,91 +79,91 @@ div + div {
 
 .width-query {
 	&.phone-up {
-		@include query.for-phone-up              { border: 2px solid red; }
+		@include utility.for-phone-up              { border: 2px solid red; }
 	}
 	&.phone-only {
-		@include query.for-phone-only            { border: 2px solid red; }
+		@include utility.for-phone-only            { border: 2px solid red; }
 	}
 	&.phone-portrait-up {
-		@include query.for-phone-portrait-up     { border: 2px solid red; }
+		@include utility.for-phone-portrait-up     { border: 2px solid red; }
 	}
 	&.phone-portrait-only {
-		@include query.for-phone-portrait-only   { border: 2px solid red; }
+		@include utility.for-phone-portrait-only   { border: 2px solid red; }
 	}
 	&.phone-landscape-up {
-		@include query.for-phone-landscape-up    { border: 2px solid red; }
+		@include utility.for-phone-landscape-up    { border: 2px solid red; }
 	}
 	&.phone-landscape-only {
-		@include query.for-phone-landscape-only  { border: 2px solid red; }
+		@include utility.for-phone-landscape-only  { border: 2px solid red; }
 	}
 	&.tablet-up {
-		@include query.for-tablet-up             { border: 2px solid red; }
+		@include utility.for-tablet-up             { border: 2px solid red; }
 	}
 	&.tablet-only {
-		@include query.for-tablet-only           { border: 2px solid red; }
+		@include utility.for-tablet-only           { border: 2px solid red; }
 	}
 	&.tablet-portrait-up {
-		@include query.for-tablet-portrait-up    { border: 2px solid red; }
+		@include utility.for-tablet-portrait-up    { border: 2px solid red; }
 	}
 	&.tablet-portrait-only {
-		@include query.for-tablet-portrait-only  { border: 2px solid red; }
+		@include utility.for-tablet-portrait-only  { border: 2px solid red; }
 	}
 	&.tablet-landscape-up {
-		@include query.for-tablet-landscape-up   { border: 2px solid red; }
+		@include utility.for-tablet-landscape-up   { border: 2px solid red; }
 	}
 	&.tablet-landscape-only {
-		@include query.for-tablet-landscape-only { border: 2px solid red; }
+		@include utility.for-tablet-landscape-only { border: 2px solid red; }
 	}
 	&.desktop-up {
-		@include query.for-desktop-up            { border: 2px solid red; }
+		@include utility.for-desktop-up            { border: 2px solid red; }
 	}
 	&.desktop-only {
-		@include query.for-desktop-only          { border: 2px solid red; }
+		@include utility.for-desktop-only          { border: 2px solid red; }
 	}
 	&.big-desktop-up {
-		@include query.for-big-desktop-up        { border: 2px solid red; }
+		@include utility.for-big-desktop-up        { border: 2px solid red; }
 	}
 	&.big-desktop-only {
-		@include query.for-big-desktop-only      { border: 2px solid red; }
+		@include utility.for-big-desktop-only      { border: 2px solid red; }
 	}
 }
 
 .height-query {
 	&.tiny-height-up {
-		@include query.for-tiny-height-up     { border: 2px solid red; }
+		@include utility.for-tiny-height-up     { border: 2px solid red; }
 	}
 	&.tiny-height-only {
-		@include query.for-tiny-height-only   { border: 2px solid red; }
+		@include utility.for-tiny-height-only   { border: 2px solid red; }
 	}
 	&.small-height-up {
-		@include query.for-small-height-up    { border: 2px solid red; }
+		@include utility.for-small-height-up    { border: 2px solid red; }
 	}
 	&.small-height-only {
-		@include query.for-small-height-only  { border: 2px solid red; }
+		@include utility.for-small-height-only  { border: 2px solid red; }
 	}
 	&.medium-height-up {
-		@include query.for-medium-height-up   { border: 2px solid red; }
+		@include utility.for-medium-height-up   { border: 2px solid red; }
 	}
 	&.medium-height-only {
-		@include query.for-medium-height-only { border: 2px solid red; }
+		@include utility.for-medium-height-only { border: 2px solid red; }
 	}
 	&.large-height-up {
-		@include query.for-large-height-up    { border: 2px solid red; }
+		@include utility.for-large-height-up    { border: 2px solid red; }
 	}
 	&.large-height-only {
-		@include query.for-large-height-only  { border: 2px solid red; }
+		@include utility.for-large-height-only  { border: 2px solid red; }
 	}
 }
 
 .browser-query {
 	&.chrome {
-		@include query.for-chrome  { border: 2px solid red; }
+		@include utility.for-chrome  { border: 2px solid red; }
 	}
 	&.firefox {
-		@include query.for-firefox { border: 2px solid red; }
+		@include utility.for-firefox { border: 2px solid red; }
 	}
 	&.safari {
-		@include query.for-safari  { border: 2px solid red; }
+		@include utility.for-safari  { border: 2px solid red; }
 	}
 }
 
@@ -184,45 +203,45 @@ div + div {
 }
 
 .layout-full-width {
-	@include layout.full-width(1rem);
+	@include utility.full-width(1rem);
 }
 
 .layout-centering {
-	@include layout.centering;
+	@include utility.centering;
 }
 
 .layout-centering-self {
-	@include layout.centering-self(true, true, relative);
+	@include utility.centering-self(true, true, relative);
 }
 
 .layout-fill-self {
-	@include layout.fill-self;
+	@include utility.fill-self;
 }
 
 .layout-side-margin {
-	@include layout.side-margin(40rem, 1rem);
+	@include utility.side-margin(40rem, 1rem);
 }
 
 .layout-aspect {
-	@include layout.aspect(3, 1);
+	@include utility.aspect(3, 1);
 }
 
 .layout-frame-contain {
-	@include layout.frame-contain(3, 2);
+	@include utility.frame-contain(3, 2);
 }
 
 .layout-wrap {
-	@include layout.wrap((1rem 2rem));
+	@include utility.wrap((1rem 2rem));
 }
 
 .layout-column-2 {
-	@include layout.column(2, 2rem);
+	@include utility.column(2, 2rem);
 }
 
 .layout-column-3 {
-	@include layout.column(3, 2rem);
+	@include utility.column(3, 2rem);
 }
 
 .layout-column-4 {
-	@include layout.column(4, 2rem);
+	@include utility.column(4, 2rem);
 }
