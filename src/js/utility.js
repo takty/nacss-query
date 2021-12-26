@@ -1,9 +1,9 @@
 /**
  *
- * Query
+ * Utility
  *
  * @author Takuto Yanagida
- * @version 2021-12-07
+ * @version 2021-12-26
  *
  */
 
@@ -13,14 +13,13 @@
 window['NACSS'] = window['NACSS'] || {};
 
 
-(function (NS) {
+((NS) => {
 
-	// @include _utility.js
-
+	// @include __utility.js
 	{
-		// @include _inner.js
+		// @include _query.js
 		NS['BROWSER'] = getBrowser();
-		NS['DEVICE'] = getDevice();
+		NS['DEVICE']  = getDevice();
 
 		onResize(() => {
 			[NS['BP_WIDTH'], NS['BP_HEIGHT']] = getBreakPointSize();
