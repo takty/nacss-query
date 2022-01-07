@@ -3,7 +3,7 @@
  * Style for Document
  *
  * @author Takuto Yanagida
- * @version 2021-12-26
+ * @version 2022-01-07
  *
  */
 
@@ -42,7 +42,7 @@ header {
 }
 
 main {
-	margin-top: 2rem;
+	margin-block-start: 2rem;
 }
 
 
@@ -74,7 +74,7 @@ div.blank {
 }
 
 div + div {
-	margin-top: 1rem;
+	margin-block-start: 1rem;
 }
 
 .width-query {
