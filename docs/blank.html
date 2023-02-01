@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+<title>Polyfill of pseudo class 'blank' - nacss-utility</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.min.css?v120049t">
+<script src="js/utility.min.js?v120049t"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+	NACSS.utility.applyBlank();
+});
+</script>
+</head>
+
+<body>
+	<header>
+		<h1>Polyfill of pseudo class 'blank'</h1>
+		<nav><a href="index.html">Go back</a></nav>
+	</header>
+
+	<main>
+		<h2>With polyfill</h2>
+		<div class="blank-target" data-nc-blank>
+		</div>
+
+		<h2>Without polyfill</h2>
+		<div class="blank-target">
+		</div>
+
+		<h2>Empty</h2>
+		<div class="blank-target"></div>
+	</main>
+</body>
+</html>

@@ -1,12 +1,9 @@
 /**
- *
  * Style for Document
  *
  * @author Takuto Yanagida
  * @version 2022-01-07
- *
  */
-
 
 @use '../src/sass/_utility';
 
@@ -164,6 +161,26 @@ div + div {
 	}
 	&.safari {
 		@include utility.for-safari  { border: 2px solid red; }
+	}
+}
+
+
+// -----------------------------------------------------------------------------
+
+
+.dimension-target {
+	border : 2px solid red;
+	padding: 1rem;
+
+	font-family: monospace;
+
+	> * { margin: 0; }
+}
+
+.blank-target {
+	border: 2px solid red;
+	&:empty {
+		border: 2px solid blue;
 	}
 }
 

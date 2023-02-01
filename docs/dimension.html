@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+<title>Custom property of element dimensions - nacss-utility</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.min.css?v120049t">
+<script src="js/utility.min.js?v120049t"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+	NACSS.utility.applyDimension();
+});
+</script>
+</head>
+
+<body>
+	<header>
+		<h1>Custom property of element dimensions</h1>
+		<nav><a href="index.html">Go back</a></nav>
+	</header>
+
+	<main>
+		<h2>Width & Height</h2>
+		<div class="dimension-target" data-nc-dim="width:offsetWidth;height:offsetHeight">
+			data-nc-dim="width: offsetWidth; height: offsetHeight;"
+		</div>
+	</main>
+</body>
+</html>
