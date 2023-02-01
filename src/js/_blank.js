@@ -5,28 +5,29 @@
  * @version 2023-02-01
  */
 
-function apply(root = document.body, opts = {}) {
+function apply(opts = {}) {
 	opts = Object.assign({
+		root    : document.body,
 		styleKey: ':ncBlank',
 	}, opts);
 
 	onLoad(() => {
-		apply(root);
+		apply(opts.root);
 		const mo = new MutationObserver(ms => {
 			for (const m of ms) {
 				if ('childList' === m.type) apply(m.target);
 			}
 		});
-		mo.observe(root, { childList: true });
+		mo.observe(opts.root, { childList: true });
 	});
 
 	function apply(elm) {
-		const ts1 = elm.querySelectorAll(getSelector(opts.styleKey));
-		for (const c of ts1) {
-			if (!c.children.length) {
-				while (c.firstChild) c.removeChild(c.firstChild);
+		const ts = elm.querySelectorAll(getSelector(opts.styleKey));
+		for (const t of ts) {
+			if (!t.children.length) {
+				while (t.firstChild) t.removeChild(t.firstChild);
 			}
-			setClass(c, opts.styleKey, false)
+			setClass(t, opts.styleKey, false)
 		}
 	}
 }

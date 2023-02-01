@@ -30,6 +30,10 @@ window['NACSS']['utility'] = window['NACSS']['utility'] || {};
 			// @include _blank.js
 			NS.applyBlank = apply;
 		}
+		{
+			// @include _dimension.js
+			NS.applyDimension = apply;
+		}
 
 	})(NS['utility']);
 
